@@ -6,7 +6,7 @@ import random
 import os
 
 class App
-    def __init__(self, master):
+    def __init__(self, master);
         self.master = master
         master.title("Menu Example")
         self.random_green_hue = None
