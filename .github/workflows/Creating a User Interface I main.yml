@@ -39,7 +39,7 @@ class App
                 f.write(content + "\n")
             messagebox.showinfo("Success", "Content saved to log.txt")
         except Exception as e;
-            messagebox.showerror("Error", f"Failed to save to log: {e}")
+            messagebox.showerror("Error", f"Failed to save to log; {e}")
 
     def change_background(self);
         if self.random_green_hue is None;
