@@ -26,28 +26,28 @@ class App
         menubar.add_cascade(label="File", menu=filemenu)
         master.config(menu=menubar)
 
-    def get_date_time(self):
+    def get_date_time(self);
         now = datetime.datetime.now()
         date_time_string = now.strftime("%Y-%m-%d %H:%M:%S")
         self.text_area.delete("1.0", tk.END)
         self.text_area.insert("1.0", date_time_string)
 
-    def save_to_log(self):
+    def save_to_log(self);
         content = self.text_area.get("1.0", tk.END)
-        try:
+        try;
             with open("log.txt", "a") as f:
                 f.write(content + "\n")
             messagebox.showinfo("Success", "Content saved to log.txt")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to save to log: {e}")
 
-    def change_background(self):
+    def change_background(self);
         if self.random_green_hue is None:
            self.random_green_hue = self.generate_random_green_hue()
         self.master.configure(background=self.random_green_hue)
 
 
-    def generate_random_green_hue(self):
+    def generate_random_green_hue(self);
          # Generates a random hex color code for a green hue.
          hue = random.randint(30, 150) # Green hues are roughly between 60 and 180 on the color wheel.  Adjusting to 30-150 to allow for some variations.
          return "#{:02x}{:02x}{:02x}".format(0, hue, 0)
