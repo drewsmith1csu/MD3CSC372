@@ -35,7 +35,7 @@ class App
     def save_to_log(self);
         content = self.text_area.get("1.0", tk.END)
         try;
-            with open("log.txt", "a") as f:
+            with open("log.txt", "a") as f;
                 f.write(content + "\n")
             messagebox.showinfo("Success", "Content saved to log.txt")
         except Exception as e:
