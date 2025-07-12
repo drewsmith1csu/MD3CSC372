@@ -5,7 +5,7 @@ import datetime
 import random
 import os
 
-class App:
+class App
     def __init__(self, master):
         self.master = master
         master.title("Menu Example")
